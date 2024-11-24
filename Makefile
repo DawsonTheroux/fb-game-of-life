@@ -1,7 +1,7 @@
 CC = gcc
-CFLAGS = -I../include -Wall -Wextra
+CFLAGS = -Iinclude -Wall -Wextra
 LDFLAGS =
-SRC = main.c
+SRC = src/main.c
 OBJ = $(SRC:.c=.o)
 BIN = fb-game-of-life 
 

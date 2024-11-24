@@ -1,2 +1,4 @@
 bin/*
 obj/*
+*.o
+fb-game-of-life
