@@ -3,6 +3,6 @@
 
 #include <stdio.h>
 
-void print_hello_world();
+int update_fb_device();
 
 #endif
