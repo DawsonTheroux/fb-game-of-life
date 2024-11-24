@@ -1,5 +1,5 @@
 CC ?= gcc  # Default to gcc, overridden by Yocto's CC
-CFLAGS ?= -Wall -Wextra -I../include
+CFLAGS ?= -Wall -Wextra -Iinclude
 LDFLAGS ?=
 
 # Source files and target binary
