@@ -1,0 +1,7 @@
+# Frame buffer game of life.
+## Description
+  Game of life application that is utilizes the pixels of a monitor through the frame buffer device of a Linux system.
+
+
+## Build
+  Use the make command.
