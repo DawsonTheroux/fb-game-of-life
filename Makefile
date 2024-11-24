@@ -3,7 +3,7 @@ CFLAGS ?= -Wall -Wextra -I../include
 LDFLAGS ?=
 
 # Source files and target binary
-SRCS = main.c
+SRCS = src/main.c
 OBJS = $(SRCS:.c=.o)
 TARGET = fb-game-of-life
 
