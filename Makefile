@@ -1,17 +1,27 @@
-CC = gcc
-CFLAGS = -Iinclude -Wall -Wextra
-LDFLAGS =
-SRC = src/main.c
-OBJ = $(SRC:.c=.o)
-BIN = fb-game-of-life 
+CC ?= gcc  # Default to gcc, overridden by Yocto's CC
+CFLAGS ?= -Wall -Wextra -I../include
+LDFLAGS ?=
 
-all: $(BIN)
+# Source files and target binary
+SRCS = main.c
+OBJS = $(SRCS:.c=.o)
+TARGET = fb-game-of-life
 
-$(BIN): $(OBJ)
-	$(CC) $(OBJ) -o $@ $(LDFLAGS)
+# Default rule
+all: $(TARGET)
 
+# Rule to link the binary
+$(TARGET): $(OBJS)
+	$(CC) $(OBJS) -o $@ $(LDFLAGS)
+
+# Rule to compile source files
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+# Clean up build artifacts
 clean:
-	rm -f $(OBJ) $(BIN)
+	rm -f $(OBJS) $(TARGET)
+
+# Phony targets
+.PHONY: all clean
+
